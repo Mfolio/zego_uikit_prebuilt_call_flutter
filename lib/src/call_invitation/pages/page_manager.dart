@@ -473,13 +473,12 @@ class ZegoInvitationPageManager {
                           "Incoming voice call...")),
                   actionType: ActionType.KeepOnTop),
          actionButtons: [
-          NotificationActionButton(key: 'REDIRECT', label: 'Redirect'),
           NotificationActionButton(
               key: 'REPLY',
               label: 'Qəbul edin',
               requireInputText: true,
               color: Colors.green,
-              actionType: ActionType.SilentAction
+              actionType: ActionType.Default,
           ),
           NotificationActionButton(
               key: 'DISMISS',
