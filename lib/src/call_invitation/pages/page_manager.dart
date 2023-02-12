@@ -476,13 +476,14 @@ class ZegoInvitationPageManager {
           NotificationActionButton(
               key: 'REPLY',
               label: 'Qəbul edin',
-              requireInputText: true,
+              enabled: true,
               color: Colors.green,
               actionType: ActionType.Default,
           ),
           NotificationActionButton(
               key: 'DISMISS',
               label: 'Geri çevir',
+              enabled: false,
               color: Colors.red,
               actionType: ActionType.DismissAction,
               isDangerousOption: true)
