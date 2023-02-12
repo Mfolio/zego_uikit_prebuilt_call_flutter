@@ -478,13 +478,13 @@ class ZegoInvitationPageManager {
               key: 'REPLY',
               label: 'Qəbul edin',
               requireInputText: true,
-              color: Colors.green
+              color: Colors.green,
               actionType: ActionType.SilentAction
           ),
           NotificationActionButton(
               key: 'DISMISS',
               label: 'Geri çevir',
-              color: Colors.red
+              color: Colors.red,
               actionType: ActionType.DismissAction,
               isDangerousOption: true)
         ],)
