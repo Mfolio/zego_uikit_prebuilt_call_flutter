@@ -471,7 +471,7 @@ class ZegoInvitationPageManager {
                               ? innerText?.incomingGroupVoiceCallDialogMessage
                               : innerText?.incomingVoiceCallDialogMessage) ??
                           "Incoming voice call...")),
-                  actionType: ActionType.KeepOnTop),
+                  actionType: ActionType.Default),
          actionButtons: [
           NotificationActionButton(
               key: 'REPLY',
