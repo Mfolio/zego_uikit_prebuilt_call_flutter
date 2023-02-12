@@ -460,6 +460,7 @@ class ZegoInvitationPageManager {
                   channelKey: channelKey,
                   title: invitationData.inviter?.name ?? "inviter",
                   wakeUpScreen: true,
+                  displayOnBackground: true,
                   body: (ZegoCallType.videoCall == invitationData.type
                       ? ((invitationData.invitees.length > 1
                               ? innerText?.incomingGroupVideoCallDialogMessage
@@ -469,7 +470,23 @@ class ZegoInvitationPageManager {
                               ? innerText?.incomingGroupVoiceCallDialogMessage
                               : innerText?.incomingVoiceCallDialogMessage) ??
                           "Incoming voice call...")),
-                  actionType: ActionType.Default))
+                  actionType: ActionType.KeepOnTop),
+         actionButtons: [
+          NotificationActionButton(key: 'REDIRECT', label: 'Redirect'),
+          NotificationActionButton(
+              key: 'REPLY',
+              label: 'Qəbul edin',
+              requireInputText: true,
+              color: Colors.green
+              actionType: ActionType.SilentAction
+          ),
+          NotificationActionButton(
+              key: 'DISMISS',
+              label: 'Geri çevir',
+              color: Colors.red
+              actionType: ActionType.DismissAction,
+              isDangerousOption: true)
+        ],)
           .onError((error, stackTrace) {
         ZegoLoggerService.logError(
           error.toString(),
