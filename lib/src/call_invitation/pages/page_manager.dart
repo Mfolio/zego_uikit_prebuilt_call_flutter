@@ -166,6 +166,7 @@ class ZegoInvitationPageManager {
                 channelGroupKey: 'zego_prebuilt_call_channel_group',
                 channelKey: channelKey,
                 channelName: channelName,
+                importance: NotificationImportance.High,
                 channelDescription: 'Notification channel for call',
                 defaultColor: const Color(0xFF9D50DD),
                 soundSource: soundSource,
